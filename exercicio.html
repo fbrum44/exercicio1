@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+
+<script>
+	
+	var idadePessoas = [];
+	var pesoPessoas = [];
+
+	var somaIdade = 0;
+
+	var quantidadePeso = 0;	
+	
+	for (var i = 0; i < 7; i++) {
+		pesoPessoas.push(Math.round(Math.random() * 100 + 1));
+		idadePessoas.push(Math.round(Math.random() * 100 + 1));
+	}	
+		
+	for (var j = 0; j < pesoPessoas.length; j++) {
+		if(pesoPessoas[j] > 90){
+			quantidadePeso++;
+		}
+	}
+	
+	function mediaIdades(){
+		for (var k = 0; k < idadePessoas.length; k++) {
+			somaIdade += idadePessoas[k]
+		}
+		mediaIdades = (somaIdade/idadePessoas.length);
+		return mediaIdades;		
+	}
+	
+
+
+	console.log(pesoPessoas, quantidadePeso, idadePessoas, mediaIdades());
+
+				
+</script>
+	
+	
